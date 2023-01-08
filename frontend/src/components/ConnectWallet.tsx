@@ -1,11 +1,6 @@
 import { Button } from "@mui/material";
 import { useEffect } from "react";
 
-type WalletProps = {
-  currentAccount: string
-  setterAccount: (account: string) => void;
-}
-
 export function ConnectWallet(props: WalletProps) {
   const connectWallet = () => {
     const requestEthAccounts = async() => {
