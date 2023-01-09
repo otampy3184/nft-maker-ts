@@ -25,7 +25,7 @@ function App() {
         {!currentAccount ? (
           <ConnectWallet
             currentAccount={currentAccount}
-            setterAccount = {() => setterAccount}
+            setterAccount = {setterAccount}
            />
         ) : (
           <div>
