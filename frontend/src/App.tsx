@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 
 import { ConnectWallet } from './components/ConnectWallet';
+import { UploadToIPFS } from './components/UploadToIPFS';
 
 function App() {
   const [currentAccount, setCurrentAccount] = useState<string>("")
@@ -26,7 +27,15 @@ function App() {
             currentAccount={currentAccount}
             setterAccount = {() => setterAccount}
            />
-        ) : null}
+        ) : (
+          <div>
+            <UploadToIPFS
+              setterIsLoading={setterIsLoading}
+              setterResult={setterResult}
+              result={result}
+             />
+          </div>
+        )}
       </div>
     </div>
   );
