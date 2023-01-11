@@ -31,9 +31,11 @@ export function UploadToIPFS(props: IPFSProps) {
             props.setterResult(file.cid)
         }
     } 
+
     return (
         <div>
-            <Input className="imageToIpfs" multiline name="upload" type="file" onChange={uploadToIPFS} />
+            <input className="imageToIpfs" name="upload" type="file" accept=".jpg, .png" onChange={uploadToIPFS} />
+            {props.result}
         </div>
     )
 }

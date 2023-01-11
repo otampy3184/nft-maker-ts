@@ -4,7 +4,8 @@ interface Window {
 
 interface WalletProps {
   currentAccount: string;
-  setterAccount: (account: string) => void;
+  // setterAccount: (account: string) => void;
+  setCurrentAccount: (value: React.SetStateAction<string>) => void
 }
 
 interface IPFSProps {

@@ -22,10 +22,10 @@ function App() {
   return (
     <div className="App">
       <div className='outerBox'>
-        {!currentAccount ? (
+        {currentAccount === null ? (
           <ConnectWallet
             currentAccount={currentAccount}
-            setterAccount = {setterAccount}
+            setCurrentAccount = {setCurrentAccount}
            />
         ) : (
           <div>
